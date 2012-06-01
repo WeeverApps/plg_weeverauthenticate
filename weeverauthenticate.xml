@@ -2,13 +2,13 @@
 <install type="plugin" version="1.5.0" group="user" method="upgrade">
 
 	 <name>Weever AJAX Authenticator</name>
-	 <creationDate>2012-04-21</creationDate>
+	 <creationDate>2012-06-01</creationDate>
 	 <author>Robert Gerald Porter</author>
 	 <authorEmail>rob@weeverapps.com</authorEmail>
 	 <authorUrl>http://www.weeverapps.com/</authorUrl>
 	 <copyright>(c) 2012 Weever Apps Inc.</copyright>
 	 <license>GPLv3</license>
-	 <version>0.1-PR1</version>
+	 <version>0.2</version>
 	 <releaseType>Stable</releaseType>
 	 <description>Enables login via Asyncronous Javascript connection.</description>
 	 

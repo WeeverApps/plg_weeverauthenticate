@@ -4,7 +4,7 @@
 *	(c) 2012 Weever Apps Inc. <http://www.weeverapps.com/>
 *
 *	Author: 	Robert Gerald Porter <rob@weeverapps.com>
-*	Version: 	0.1
+*	Version: 	0.2
 *   License: 	GPL v3.0
 *
 *   This extension is free software: you can redistribute it and/or modify
@@ -26,34 +26,33 @@ jimport('joomla.plugin.plugin');
 class plgUserWeeverAuthenticate extends JPlugin {
 
 
-	function __construct(& $subject, $config)
+	public function __construct(& $subject, $config)
 	{
+	
 		parent::__construct($subject, $config);
+		
 	}
 	
 
-	function onLoginUser($user, $options)
+	public function onLoginUser($user, $options)
 	{
 		
-		
-		if ( JRequest::getVar('jCorsRequest') ) {
+		if ( JRequest::getVar('wxCorsRequest') ) {
 					
 			echo "{success:true}";
 			
 			jexit();
 			
 		}
-
-		
 		
 	}
 	
 	
 	/* Doesn't actually work in Joomla 1.5. Likely never will be fixed. */
-	function onLoginFailure($user, $options)
+	public function onLoginFailure($user, $options)
 	{
 		
-		if( JRequest::getVar('jCorsRequest') )
+		if( JRequest::getVar('wxCorsRequest') )
 		{
 			
 			echo "{success:false}";
@@ -62,14 +61,13 @@ class plgUserWeeverAuthenticate extends JPlugin {
 		
 		}
 		
-		
 	}
 
 
-	function onLogoutUser($user)
+	public function onLogoutUser($user)
 	{
 	
-		if( JRequest::getVar('jCorsRequest') )
+		if( JRequest::getVar('wxCorsRequest') )
 		{
 		
 			echo "success";
